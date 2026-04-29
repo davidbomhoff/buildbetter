@@ -768,8 +768,8 @@ body {
 
 /* Per-command highlight states — Figma #18A0FB selection style */
 
-/* Inspect: middle card selected for component inspection */
-.mcp-design-frame.mcp-h-inspect .vs-card:nth-child(3) {
+/* Inspect: first card selected for component inspection */
+.mcp-design-frame.mcp-h-inspect .vs-card:nth-child(1) {
   outline: 2px solid #18A0FB;
   outline-offset: 3px;
   transition: outline 0.25s ease;
