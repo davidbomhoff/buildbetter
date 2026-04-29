@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>build better</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" aria-label="Page header">
+    <div class="header-top">
+      <p class="logo">build better</p>
+      <nav class="header-toc" aria-label="Table of contents">
+        <a class="toc-link active" data-variant="default"  href="#">Intro</a>
+        <a class="toc-link" data-variant="variant2"  href="#">Deeper</a>
+        <a class="toc-link" data-variant="ctx-a"     href="#">Tools</a>
+        <a class="toc-link" data-variant="variant4"  href="#">Figma MCP</a>
+        <a class="toc-link" data-variant="ctx-b"     href="#">Language</a>
+        <a class="toc-link" data-variant="variant3"  href="#">Variables</a>
+        <a class="toc-link" data-variant="ctx-c"     href="#">Interactions</a>
+        <a class="toc-link" data-variant="variant5"  href="#">Wired Frame</a>
+        <a class="toc-link" data-variant="ctx-d"     href="#">Build Better</a>
+      </nav>
+    </div>
+    <div class="header-divider" id="headerDivider" aria-hidden="true"></div>
+  </header>
+
+  <main class="page" aria-label="Design studio content">
+    <section class="content-wrap" id="contentComponent" aria-live="polite">
+      <div class="content-box" id="variantComponent">
+        <div class="scroll-hint" aria-hidden="true">
+          <svg class="scroll-hint-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 3 L10 15 M5 10.5 L10 15.5 L15 10.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="scroll-hint-text">scroll to progress</span>
+        </div>
+
+        <!-- Default: intro -->
+        <article class="variant-content active" data-variant="default">
+          <div class="intro-block">
+            <p class="ctx-h1">Design by hand,</p>
+            <p class="ctx-h1-italic">Code using AI</p>
+            <p class="ctx-body-text">Design should feel human, as it’s built to service humans. It’s easy to understand why the advent of AI might strike a chord with designers; it’s a literal problem-solving machine. Despite this, a human hand in design will always be necessary, as a machine cannot understand how a design feels when used by a human. After studying design and exploring the potential of AI tools, I’ve come to understand that there is a happy medium for designers when it comes to using AI. While it’s easy to just vibecode an entire project; process to prototype, the product will turn out messy and ugly. When designed by hand, you’ll get a great product; but maybe not reaching the full potential of what it could be.</p>
+          </div>
+        </article>
+
+        <!-- Variant 2: Design Bigger -->
+        <article class="variant-content" data-variant="variant2">
+          <div class="ctx-heading-block">
+            <p class="ctx-h1">Design</p>
+            <p class="ctx-h1-italic">Deeper</p>
+            <p class="ctx-body-text">This tool looks to help UI designers understand how they can use the power of AI to turn a Figma prototype into an interactive app. Let’s say, for example, you’re designing an online card game. You have the vector files, stylesheets, and a pretty good Figma prototype, but simulation of gameplay is a function that cannot be built out in Figma, so the real user experience isn’t quite replicated. This is where I teach you how to upgrade your existing prototype to something that closer represents the MVP. All this will take is some basic knowledge of html, css, and js.</p>
+          </div>
+        </article>
+
+        <!-- Variant 3: Variable Studio interactive -->
+        <article class="variant-content variant-variables" data-variant="variant3">
+          <div class="vs-layout">
+            <section class="vs-copy" aria-label="Variable Studio description">
+              <h1 class="ctx-h1">
+                <span>Variable</span>
+              </h1>
+              <h1 class="ctx-h1-italic">
+                <span>Studio</span>
+              </h1>
+              <div class="vs-copy-box">
+                <div class="copy-inner">
+                  <p>
+                    This tool helps visualize how an AI assistant writes your styles. Each variable connects to a different aspect of the card game preview. See how changing variables in css affects the design as a whole.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="vs-preview" aria-label="Card preview panel" id="vsPreviewPanel">
+              <div class="vs-cards" id="vsCardRow">
+                <div class="vs-card"></div>
+                <div class="vs-card"></div>
+              </div>
+              <div class="vs-actions">
+                <button type="button" class="vs-action-btn">HIT</button>
+                <button type="button" class="vs-action-btn">STAND</button>
+                <button type="button" class="vs-action-btn">BET</button>
+              </div>
+            </section>
+
+            <section class="vs-editor-shell" aria-label="Variable code editor">
+              <div class="vs-editor-body">
+                <div class="vs-editor-scroll">
+                  <div class="vs-token-rows" id="vsTokenRows"></div>
+                </div>
+                <div class="vs-editor-pop" id="vsEditorPop"></div>
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <!-- Context A: Tools Talking -->
+        <article class="variant-content" data-variant="ctx-a">
+          <div class="ctx-heading-block">
+            <p class="ctx-h1">Tools</p>
+            <p class="ctx-h1-italic">Talking</p>
+            <p class="ctx-body-text">My process combines the powers of Figma, Claude, and VSCode. Figma allows designers to execute their vision explicitly in a pixel perfect format, a great step from a sketch to a structure. With the Figma MCP (Model Context Protocol), an AI assistant can read that structure directly, translating decisions into code without losing visual fidelity. This brings your design vision to the platform it will live in an MVP.</p>
+          </div>
+        </article>
+
+        <!-- Variant 4: Figma MCP interactive -->
+        <article class="variant-content variant-mcp" data-variant="variant4">
+          <div class="mcp-layout">
+            <section class="mcp-copy" aria-label="Figma MCP description">
+              <h1 class="mcp-title">
+                <span>Figma</span>
+              </h1><h1 class="ctx-h1-italic mcp-title-italic">
+                <span>MCP</span>
+              </h1>
+              <div class="mcp-copy-box">
+                <div class="copy-inner">
+                  <p>
+                    Once set up, the Figma MCP server allows direct translation from your mockup to your code editor. Think of the MCP as a cellular network that lets the tools speak to each other. This interactive shows prompts you can use to extract specific elements from your design, which can be combined to bring your design to life! It is important to note that for this to work you must have Figma open, and the frames you reference selected.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="mcp-console" aria-label="MCP command and output">
+              <div class="mcp-box mcp-dropdown-box">
+                <p class="mcp-section-label">Command Dropdown</p>
+                <select id="mcpCommandSelect" class="mcp-command-select" aria-label="Figma MCP command dropdown"></select>
+                <span class="mcp-select-icon">⌄</span>
+              </div>
+              <div class="mcp-box mcp-prompt-box">
+                <p class="mcp-section-label">User Prompt Text</p>
+                <div id="mcpPromptPanel" class="mcp-panel-body"></div>
+              </div>
+              <div class="mcp-box mcp-code-shell">
+                <p class="mcp-section-label">Generated Code Preview</p>
+                <pre class="mcp-code-box" id="mcpCodePanel"></pre>
+              </div>
+            </section>
+
+            <!-- Card game preview (mirrors VS/WF preview) -->
+            <section class="mcp-design-frame" id="mcpPreviewPanel" aria-label="Card game design preview">
+              <span class="mcp-design-label">Figma Design</span>
+              <div class="mcp-artboard" id="mcpArtboard">
+                <div class="vs-cards">
+                  <div class="vs-card"></div>
+                  <div class="vs-card"></div>
+                </div>
+                <div class="vs-actions">
+                  <button type="button" class="vs-action-btn">HIT</button>
+                  <button type="button" class="vs-action-btn">STAND</button>
+                  <button type="button" class="vs-action-btn">BET</button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <!-- Context B: Design Language -->
+        <article class="variant-content" data-variant="ctx-b">
+          <div class="ctx-heading-block">
+            <p class="ctx-h1">Design</p>
+            <p class="ctx-h1-italic">Language</p>
+            <p class="ctx-body-text">Now that you know how to get the AI to translate your design, the next interactive teaches how to understand what it generates. Through the MCP server, your styles become design variables. These styles can be called throughout the css with the value <code>var(--color)</code>. It is important to understand how the generated code works so that if you want to change something later you can do it yourself. This is most important for designers with the css code, but for those more interested in learning how the interactions work, asking your LLM to explain each function in the javascript can expand your understanding (and your prompts)!</p>
+          </div>
+        </article>
+
+        <!-- Variant 5: Wired Frame interactive -->
+        <article class="variant-content variant-wire" data-variant="variant5">
+          <div class="wf-layout" id="wfLayout">
+            <svg class="wf-wire-svg" id="wfWireSvg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+
+            <section class="wf-copy" aria-label="Wired Frame description">
+              <h1 class="ctx-h1">
+                <span>Wired</span>
+                              </h1><h1 class="ctx-h1-italic">
+                <span>Frame</span>
+              </h1>
+              <div class="wf-copy-box">
+                <div class="copy-inner">
+                  <p>
+                    This tool visualizes how you should mentally link elements to interactions, then shows a prompt that you could use to request your desired interaction. Pick an element of the card game, then a desired interaction, and see how the generated prompt wires these into an interactive component. Try more than one trigger and see how they effect the design!
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <div class="wf-col-group">
+              <div class="wf-prompt-overlay" id="wfPromptOverlay">
+                <p class="wf-section-label">Generated Prompt</p>
+                <div id="wfPromptBody" class="wf-prompt-body">
+                  <span class="wf-prompt-placeholder">Select an element and trigger.</span>
+                </div>
+              </div>
+              <div class="wf-cols-row">
+                <div class="wf-col wf-col-elements" aria-label="Element nodes">
+                  <p class="wf-col-label">Elements</p>
+                  <div id="wfElementCol"></div>
+                </div>
+                <div class="wf-col wf-col-triggers" aria-label="Trigger nodes">
+                  <p class="wf-col-label">Triggers</p>
+                  <div id="wfTriggerCol"></div>
+                </div>
+              </div>
+            </div>
+
+            <section class="vs-preview wf-preview" aria-label="Wireframe card preview" id="wfPreviewPanel">
+              <div class="wf-preview-port" id="wfPreviewPort" aria-hidden="true"></div>
+              <span class="wf-demo-label">Score: 21</span>
+              <div class="vs-cards">
+                <div class="vs-card"></div>
+                <div class="vs-card"></div>
+              </div>
+              <div class="vs-actions">
+                <button type="button" class="vs-action-btn">HIT</button>
+                <button type="button" class="vs-action-btn">STAND</button>
+                <button type="button" class="vs-action-btn">BET</button>
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <!-- Context C: Deep Interactions -->
+        <article class="variant-content" data-variant="ctx-c">
+          <div class="ctx-heading-block">
+            <p class="ctx-h1">Deep</p>
+            <p class="ctx-h1-italic">Interactions</p>
+            <p class="ctx-body-text">Once your Figma mockup is translated in code, you can add interactions using your own words rather than a coding language. This next interaction will show you how to apply smaller interactions to the card game interface, but this applies up to the code running these interactions themselves! This has been super useful to me from making logic for card games to getting the exact kind of effect I want on a button.</p>
+          </div>
+        </article>
+
+        <!-- Context D: Conclusion -->
+        <article class="variant-content" data-variant="ctx-d">
+          <div class="ctx-heading-block">
+            <p class="ctx-h1">Build</p>
+            <p class="ctx-h1-italic">Better</p>
+            <p class="ctx-body-text">AI certainly has its place in design, but its not as simple as commanding a machine to do what you want. Building a network between VS Code, an AI assistant, and Figma takes a little time to set up and get used to, but the result allows you to maintain your design vision and still utilize AI coding tools to elevate your prototype. Below I've linked my source for Figma MCP info, some more tips on troubleshooting with the MCP, and a bonus interactive ;) Happy coding!</p>
+            <!-- TIPS TEXT: edit the paragraph inside .ctx-tips-box to change the tips content -->
+            <div class="ctx-tips-box" id="ctxTipsBox">
+              <p>Working with the MCP won't be an automatic process. If things aren't looking right, try building component by component until you can import the full design. If you get stuck, screenshots seem to work very well as the pixel amounts will match the Figma design. What's most important is that you have a clear vision as a designer, and you can articulate how you want the design to work to your assistant. The more detail in your prompt, the better the output!</p>
+            </div>
+            <div class="ctx-pill-row">
+              <a class="ctx-pill-btn" href="https://help.figma.com/hc/en-us/articles/39216419318551-Get-started-with-the-Figma-MCP-server" target="_blank" rel="noopener noreferrer">FIGMA MCP</a>
+              <button type="button" class="ctx-pill-btn" id="tipsPillBtn">TIPS</button>
+              <button type="button" class="ctx-pill-btn" id="ucPillBtn">ULTIMATE CARDS</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ultimate Cards: combined interactive -->
+        <article class="variant-content variant-uc" data-variant="variant-uc">
+          <button type="button" class="uc-back-hint" id="ucBackBtn" aria-label="Back to Build Better">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M17 10 L3 10 M8 5 L3 10 L8 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="scroll-hint-text">back</span>
+          </button>
+          <div class="uc-layout" id="ucLayout">
+            <svg class="uc-wire-svg" id="ucWireSvg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+            <!-- Left: description + interaction wiring columns -->
+            <div class="uc-wf-panel">
+              <div>
+                <h1 class="ctx-h1"><span>Ultimate</span></h1>
+                <h1 class="ctx-h1-italic"><span>Cards</span></h1>
+              </div>
+              <div class="uc-wf-copy-box">
+                <div class="copy-inner">
+                  <p>Wire interactions and change variables to fully customize this card game! You can check out the code and prompts that one could use to implement these above the interaction.</p>
+                </div>
+              </div>
+              <div class="uc-cols-row">
+                <div class="wf-col wf-col-elements" aria-label="Element nodes">
+                  <p class="wf-col-label">Elements</p>
+                  <div id="ucElementCol"></div>
+                </div>
+                <div class="wf-col wf-col-triggers" aria-label="Trigger nodes">
+                  <p class="wf-col-label">Triggers</p>
+                  <div id="ucTriggerCol"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Center: card game with flip views -->
+            <div class="uc-center">
+              <div class="uc-tab-row">
+                <button type="button" class="uc-tab-btn" id="ucTabCode">INSPECT CODE</button>
+                <button type="button" class="uc-tab-btn" id="ucTabPrompts">PROMPTS</button>
+              </div>
+              <div class="uc-card-panel" id="ucCardPanel">
+                <!-- Game view (default) -->
+                <div class="uc-view uc-view-game wf-preview active" id="ucViewGame">
+                  <div class="vs-cards" id="ucCardRow">
+                    <div class="vs-card"></div>
+                    <div class="vs-card"></div>
+                  </div>
+                  <div class="vs-actions">
+                    <button type="button" class="vs-action-btn">HIT</button>
+                    <button type="button" class="vs-action-btn">STAND</button>
+                    <button type="button" class="vs-action-btn">BET</button>
+                  </div>
+                </div>
+                <!-- Code view -->
+                <div class="uc-view uc-view-code" id="ucViewCode">
+                  <pre class="uc-code-pre" id="ucCodePre"></pre>
+                </div>
+                <!-- Prompts view -->
+                <div class="uc-view uc-view-prompts" id="ucViewPrompts">
+                  <p id="ucPromptText" class="uc-prompt-text"><span class="wf-prompt-placeholder">Select an element and trigger on the left.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: mini VS editor -->
+            <div class="uc-left">
+              <div class="uc-editor-shell">
+                <div class="uc-editor-body">
+                  <div class="uc-editor-scroll">
+                    <div class="vs-token-rows" id="ucTokenRows"></div>
+                  </div>
+                  <div class="vs-editor-pop" id="ucEditorPop"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="scroll-tracks" aria-hidden="true">
+      <section class="scroll-section" id="section1"></section>
+      <section class="scroll-section" id="section2"></section>
+      <section class="scroll-section" id="section3"></section>
+      <section class="scroll-section" id="section4"></section>
+      <section class="scroll-section" id="section5"></section>
+      <section class="scroll-section" id="section6"></section>
+      <section class="scroll-section" id="section7"></section>
+      <section class="scroll-section" id="section8"></section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
